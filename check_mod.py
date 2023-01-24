@@ -1,4 +1,4 @@
-import logging
+from logg import logging
 from mod_calc import division_op, int_div_op, rem_div_op
 
 

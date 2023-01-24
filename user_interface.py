@@ -1,5 +1,5 @@
-import logging
 import keyboard
+from logg import logging
 from check_mod import check_div_zero, check_int_div_op, check_rem_div_op
 from user_data import rational_data, complex_data
 from mod_calc import addition_op, composition_op, subtraction_op
@@ -7,6 +7,7 @@ from mod_calc import addition_op, composition_op, subtraction_op
 
 def start_menu():
     while True:
+        logging.info("Start program")
         print("the number selection menu is rational or complex")
         logging.info('selection menu is rational or complex')
         type_numbers = input("Choosing the type of numbers\n"
@@ -20,7 +21,7 @@ def start_menu():
                 menu_calc(type_numbers)
             case "3":
                 logging.info("Stop program")
-                break
+                exit()
             case _:
                 logging.error("Incorrect choice")
                 print("Incorrect choice")
@@ -28,6 +29,7 @@ def start_menu():
 
 def menu_calc(type_numbers):
     while True:
+        logging.info("Start program")
         if type_numbers == "1":
             logging.info("rational numbers are selected")
             print("Calculator Menu")
